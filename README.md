@@ -103,7 +103,7 @@ start index.html
 
 ## 🧠 Creator
 
-Made with passion by [**Nuredin Ibrahim**](https://nurexi.vercel.app/)
+Made with passion by [[**Nuredin Seid**]<br>
 🚀 Freelance Frontend Developer | UI/UX Innovator | Tech Enthusiast
 
 ---
@@ -124,12 +124,6 @@ If you like this project, consider:
 
 ---
 
-## 📬 Contact
-
-Got questions or feedback?
-Reach out via [LinkedIn](https://www.linkedin.com/in/your-link) or open an issue.
-
----
 
 > ✨ "Perfume is the art that makes memory speak." – Odore Perla
 
@@ -137,6 +131,6 @@ Reach out via [LinkedIn](https://www.linkedin.com/in/your-link) or open an issue
 
 ## 🔚 Closing Thoughts
 
-Odore Perla isn’t just a website — it’s a refined experience tailored for fragrance lovers. Every scroll, click, and interaction has been crafted to reflect the elegance of luxury perfumes. Thank you for exploring the project. Your feedback, contributions, or support would mean the world.
+ Nure Véla isn’t just a website — it’s a refined experience tailored for fragrance lovers. Every scroll, click, and interaction has been crafted to reflect the elegance of luxury perfumes. Thank you for exploring the project. Your feedback, contributions, or support would mean the world.
 
 **Feel the scent. Embrace the luxury. Live the story.** 🌸
