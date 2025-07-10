@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Nure Véla Luxury Perfumes</title>
+    <link rel="stylesheet" href="cart-styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="logo-animation">
+                <h1>Nure Véla</h1>
+                <div class="loading-bar" style="margin: 0 auto; display: block;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <h2>Nure Véla</h2>
+            </div>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="index.html#collection" class="nav-link">Collections</a></li>
+                    <li><a href="categories.html" class="nav-link">Categories</a></li>
+                    <li><a href="deals.html" class="nav-link">Deals</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-actions">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search perfumes...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="cart-container">
+                    <button class="cart-btn" id="cart-btn">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Cart Hero Section -->
+    <section class="cart-hero">
+        <div class="hero-bg">
+            <div class="hero-bg-image"></div>
+            <div class="hero-overlay"></div>
+            <div class="particles" id="particles"></div>
+        </div>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="section-badge">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>Shopping Cart</span>
+                </div>
+                <h1 class="hero-title">Your <span class="gradient-text">Selection</span></h1>
+                <p class="hero-description">
+                    Review your chosen fragrances and complete your luxury perfume collection.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Content -->
+    <section class="cart-content">
+        <div class="container">
+            <!-- Empty Cart State -->
+            <div class="empty-cart-state" id="empty-cart" style="display: none;">
+                <div class="empty-cart-content">
+                    <div class="empty-cart-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <h2>Your cart is empty</h2>
+                    <p>Discover our exquisite collection of luxury fragrances</p>
+                    <button class="btn btn-primary" onclick="window.location.href='index.html'">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Continue Shopping</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Cart with Items -->
+            <div class="cart-with-items" id="cart-with-items">
+                <div class="cart-layout">
+                    <!-- Cart Items Panel -->
+                    <div class="cart-items-panel">
+                        <div class="panel-header">
+                            <h2>Cart Items</h2>
+                            <span class="item-count" id="item-count">0 items</span>
+                        </div>
+
+                        <div class="cart-items-list" id="cart-items-list">
+                            <!-- Cart items will be dynamically populated here -->
+                        </div>
+                    </div>
+
+                    <!-- Order Summary & Payment Panel -->
+                    <div class="order-summary-panel">
+                        <!-- Order Summary -->
+                        <div class="order-summary">
+                            <div class="summary-header">
+                                <h2>Order Summary</h2>
+                                <div class="security-badge">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Secure Checkout</span>
+                                </div>
+                            </div>
+
+                            <div class="summary-details">
+                                <div class="summary-row">
+                                    <span>Subtotal</span>
+                                    <span id="subtotal-amount">$0.00</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Shipping</span>
+                                    <span class="free">FREE</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span>Tax</span>
+                                    <span id="tax-amount">$0.00</span>
+                                </div>
+                                <div class="summary-row discount-row" id="discount-row" style="display: none;">
+                                    <span>Discount (<span id="applied-coupon"></span>)</span>
+                                    <span class="discount-amount" id="discount-amount">-$0.00</span>
+                                </div>
+                                <div class="summary-divider"></div>
+                                <div class="summary-row total-row">
+                                    <span>Total</span>
+                                    <span class="total-amount" id="total-amount">$0.00</span>
+                                </div>
+                            </div>
+
+                            <!-- Coupon Code Section -->
+                            <div class="coupon-section">
+                                <div class="coupon-header">
+                                    <i class="fas fa-ticket-alt"></i>
+                                    <span>Have a coupon code?</span>
+                                </div>
+                                <div class="coupon-input-group">
+                                    <input type="text" class="coupon-input" id="coupon-input"
+                                        placeholder="Enter coupon code">
+                                    <button class="apply-coupon-btn" id="apply-coupon-btn" onclick="applyCoupon()">
+                                        <span class="btn-text">Apply</span>
+                                        <span class="btn-loading" style="display: none;">
+                                            <i class="fas fa-spinner fa-spin"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="coupon-suggestions">
+                                    <span class="suggestion-label">Try these codes:</span>
+                                    <div class="suggestion-codes">
+                                        <button class="suggestion-code"
+                                            onclick="applySuggestedCoupon('WELCOME15')">WELCOME15</button>
+                                        <button class="suggestion-code"
+                                            onclick="applySuggestedCoupon('LUXURY20')">LUXURY20</button>
+                                        <button class="suggestion-code"
+                                            onclick="applySuggestedCoupon('FIRST25')">FIRST25</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment Methods -->
+                        <div class="payment-methods">
+                            <div class="payment-header">
+                                <h2>Payment Method</h2>
+                                <div class="payment-security">
+                                    <i class="fas fa-lock"></i>
+                                    <span>256-bit SSL Encryption</span>
+                                </div>
+                            </div>
+
+                            <!-- Payment Method Tabs -->
+                            <div class="payment-tabs">
+                                <button class="payment-tab active" data-method="card"
+                                    onclick="switchPaymentMethod('card')">
+                                    <i class="fas fa-credit-card"></i>
+                                    <span>Credit Card</span>
+                                </button>
+                                <button class="payment-tab" data-method="paypal"
+                                    onclick="switchPaymentMethod('paypal')">
+                                    <i class="fab fa-paypal"></i>
+                                    <span>PayPal</span>
+                                </button>
+                            </div>
+
+                            <!-- Credit Card Form -->
+                            <div class="payment-form card-form active" id="card-form">
+                                <div class="card-preview">
+                                    <div class="credit-card">
+                                        <div class="card-background"></div>
+                                        <div class="card-content">
+                                            <div class="card-chip">
+                                                <i class="fas fa-microchip"></i>
+                                            </div>
+                                            <div class="card-number" id="card-display">•••• •••• •••• ••••</div>
+                                            <div class="card-details">
+                                                <div class="card-holder">
+                                                    <span class="label">CARD HOLDER</span>
+                                                    <span class="value" id="holder-display">YOUR NAME</span>
+                                                </div>
+                                                <div class="card-expiry">
+                                                    <span class="label">EXPIRES</span>
+                                                    <span class="value" id="expiry-display">MM/YY</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-brand" id="card-brand">
+                                            <i class="fab fa-cc-visa"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <form class="card-form-fields" id="credit-card-form">
+                                    <div class="form-group">
+                                        <label for="card-holder-name">Full Name on Card</label>
+                                        <input type="text" id="card-holder-name" name="cardHolderName"
+                                            placeholder="Nuredin Seid" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="card-number">Card Number</label>
+                                        <input type="text" id="card-number" name="cardNumber"
+                                            placeholder="1234 5678 9012 3456" maxlength="19" required>
+                                        <div class="card-icons">
+                                            <i class="fab fa-cc-visa"></i>
+                                            <i class="fab fa-cc-mastercard"></i>
+                                            <i class="fab fa-cc-amex"></i>
+                                            <i class="fab fa-cc-discover"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="expiry-date">Expiry Date</label>
+                                            <input type="text" id="expiry-date" name="expiryDate" placeholder="MM/YY"
+                                                maxlength="5" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="cvv">CVV</label>
+                                            <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4"
+                                                required>
+                                            <div class="cvv-help">
+                                                <i class="fas fa-question-circle"></i>
+                                                <div class="cvv-tooltip">
+                                                    3-digit code on the back of your card
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group checkbox-group">
+                                        <input type="checkbox" id="save-card" name="saveCard">
+                                        <label for="save-card">
+                                            <span class="checkmark"></span>
+                                            Save this card for future purchases
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- PayPal Form -->
+                            <div class="payment-form paypal-form" id="paypal-form">
+                                <div class="paypal-info">
+                                    <div class="paypal-logo">
+                                        <i class="fab fa-paypal"></i>
+                                        <span>PayPal</span>
+                                    </div>
+                                    <p>You'll receive a secure payment link via email to complete your purchase.</p>
+                                </div>
+
+                                <form class="paypal-form-fields" id="paypal-email-form">
+                                    <div class="form-group">
+                                        <label for="paypal-email">PayPal Email Address</label>
+                                        <input type="email" id="paypal-email" name="paypalEmail"
+                                            placeholder="Nure@gmail.com" required>
+                                        <div class="email-verification">
+                                            <i class="fas fa-shield-alt"></i>
+                                            <span>We'll send a secure payment request to this email</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="paypal-benefits">
+                                        <div class="benefit-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Buyer Protection</span>
+                                        </div>
+                                        <div class="benefit-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Secure Payment</span>
+                                        </div>
+                                        <div class="benefit-item">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>No Card Details Required</span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Submit Payment Button -->
+                            <button class="submit-payment-btn" id="submit-payment" onclick="processPayment()">
+                                <div class="btn-content">
+                                    <i class="fas fa-lock"></i>
+                                    <span class="btn-text">Complete Secure Payment</span>
+                                    <span class="btn-amount" id="payment-amount">$0.00</span>
+                                </div>
+                                <div class="btn-loading" style="display: none;">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                    <span>Processing...</span>
+                                </div>
+                            </button>
+
+                            <!-- Payment Security Info -->
+                            <div class="payment-security-info">
+                                <div class="security-badges">
+                                    <div class="security-badge">
+                                        <i class="fas fa-shield-alt"></i>
+                                        <span>SSL Secured</span>
+                                    </div>
+                                    <div class="security-badge">
+                                        <i class="fas fa-lock"></i>
+                                        <span>PCI Compliant</span>
+                                    </div>
+                                    <div class="security-badge">
+                                        <i class="fas fa-user-shield"></i>
+                                        <span>Privacy Protected</span>
+                                    </div>
+                                </div>
+                                <p class="security-text">
+                                    Your payment information is encrypted and secure. We never store your card details.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div class="success-modal" id="success-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="success-animation">
+                <div class="success-checkmark">
+                    <i class="fas fa-check"></i>
+                </div>
+            </div>
+            <h2>Payment Successful!</h2>
+            <p>Thank you for your purchase. Your order has been confirmed and you'll receive an email confirmation
+                shortly.</p>
+            <div class="order-details">
+                <div class="order-number">
+                    <span>Order #</span>
+                    <span id="order-number">OP-2024-001234</span>
+                </div>
+                <div class="estimated-delivery">
+                    <i class="fas fa-truck"></i>
+                    <span>Estimated delivery: 3-5 business days</span>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-primary" onclick="redirectToHome()">
+                    <i class="fas fa-home"></i>
+                    <span>Continue Shopping</span>
+                </button>
+                <button class="btn btn-secondary" onclick="viewOrderDetails()">
+                    <i class="fas fa-receipt"></i>
+                    <span>View Order Details</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nure Véla</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nure Véla. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="cart-script.js"></script>
+</body>
+
+</html>

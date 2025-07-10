@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Deals - Nure Véla Luxury Perfumes</title>
+    <link rel="stylesheet" href="deals-styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="logo-animation">
+                <h1>Nure Véla</h1>
+                <div class="loading-bar" style="margin: 0 auto; display: block;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <h2>Nure Véla</h2>
+            </div>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#collection" class="nav-link">Collections</a></li>
+                    <li><a href="Categories.html" class="nav-link">Categories</a></li>
+                    <li><a href="deals.html" class="nav-link">Deals</a></li>
+                    <li><a href="Contact.html" class="nav-link">Contact</a></li>
+
+                </ul>
+            </div>
+
+            <div class="nav-actions">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search perfumes...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="cart-container">
+                    <button class="cart-btn" id="cart-btn">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sticky Deal Alert -->
+    <div class="deal-alert-banner" id="deal-alert">
+        <div class="container">
+            <div class="alert-content">
+                <i class="fas fa-fire"></i>
+                <span>Today's Flash Sale Ends In: </span>
+                <div class="mini-countdown" id="header-countdown">
+                    <span class="time-unit">04</span>:
+                    <span class="time-unit">32</span>:
+                    <span class="time-unit">19</span>
+                </div>
+                <button class="alert-close" id="alert-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Deals Hero Section -->
+    <section class="deals-hero" id="deals">
+        <div class="hero-bg">
+            <div class="hero-bg-image" style="background-image: url('perfum.jpg')"></div>
+            <div class="hero-overlay"></div>
+            <div class="particles" id="particles"></div>
+            <div class="floating-elements">
+                <div class="floating-deal floating-deal-1">
+                    <span>50%</span>
+                    <small>OFF</small>
+                </div>
+                <div class="floating-deal floating-deal-2">
+                    <span>70%</span>
+                    <small>OFF</small>
+                </div>
+                <div class="floating-deal floating-deal-3">
+                    <span>30%</span>
+                    <small>OFF</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="section-badge">
+                    <i class="fas fa-fire"></i>
+                    <span>Limited Time Offers</span>
+                </div>
+                <h1 class="hero-title">Exclusive <span class="gradient-text">Deals</span></h1>
+                <p class="hero-description">
+                    Discover incredible savings on our most coveted luxury fragrances. Limited time offers you won't
+                    want to miss.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">24</span>
+                        <span class="stat-label">Flash Deals</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15</span>
+                        <span class="stat-label">Bundle Offers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">Daily Specials</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flash Deals Section -->
+    <section class="flash-deals-section" id="flash-deals">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-bolt"></i>
+                    <span>Flash Deals</span>
+                </div>
+                <h2> Lightning Fast Savings</h2>
+                <p>Limited quantities, limited time - grab these deals before they're gone!</p>
+            </div>
+
+            <div class="flash-deals-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                <!-- Flash Deal 1 -->
+                <div class="flash-deal-card" data-category="flash">
+                    <div class="deal-timer">
+                        <div class="timer-label">Ends In:</div>
+                        <div class="countdown" data-end-time="2024-12-31T23:59:59">
+                            <div class="time-unit">
+                                <span class="time-value hours">04</span>
+                                <span class="time-label">Hours</span>
+                            </div>
+                            <div class="time-unit">
+                                <span class="time-value minutes">32</span>
+                                <span class="time-label">Mins</span>
+                            </div>
+                            <div class="time-unit">
+                                <span class="time-value seconds">19</span>
+                                <span class="time-label">Secs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-image">
+                        <img src="Демонстрация Вашего парфюма на фоне мха и леса _ создано в нейрофото.jpg"
+                            alt="Chanel Chance">
+                        <div class="discount-badge">
+                            <span>60%</span>
+                            <small>OFF</small>
+                        </div>
+                        <div class="limited-banner">
+                            <span>LIMITED TIME OFFER</span>
+                        </div>
+                        <div class="stock-indicator">
+                            <div class="stock-bar">
+                                <div class="stock-fill" style="width: 25%"></div>
+                            </div>
+                            <span class="stock-text">Only 5 left!</span>
+                        </div>
+                    </div>
+
+                    <div class="deal-info">
+                        <h3>Chanel Chance Eau Tendre</h3>
+                        <div class="price-section">
+                            <span class="deal-price">$54</span>
+                            <span class="original-price">$135</span>
+                            <span class="savings">Save $81</span>
+                        </div>
+                        <div class="urgency-indicators">
+                            <div class="viewers-count">
+                                <i class="fas fa-eye"></i>
+                                <span class="viewer-number">23</span> people viewing
+                            </div>
+                        </div>
+                        <div class="deal-actions" style="font-size: 1.05em;">
+                            <button class="btn btn-primary add-to-cart" data-product="chanel-chance"
+                                style="padding: 0.5em 1em; font-size: 0.95em;">
+                                <i class="fas fa-shopping-bag" style="font-size: 0.95em;"></i>
+                                Add to Cart
+                            </button>
+                            <button class="btn btn-secondary quick-view" style="padding: 0.5em 1em; font-size: 0.95em;">
+                                <i class="fas fa-eye" style="font-size: 0.95em;"></i>
+                                Quick View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flash Deal 2 -->
+                <div class="flash-deal-card" data-category="flash">
+                    <div class="deal-timer">
+                        <div class="timer-label">Ends In:</div>
+                        <div class="countdown" data-end-time="2024-12-31T23:59:59">
+                            <div class="time-unit">
+                                <span class="time-value hours">02</span>
+                                <span class="time-label">Hours</span>
+                            </div>
+                            <div class="time-unit">
+                                <span class="time-value minutes">15</span>
+                                <span class="time-label">Mins</span>
+                            </div>
+                            <div class="time-unit">
+                                <span class="time-value seconds">43</span>
+                                <span class="time-label">Secs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-image">
+                        <img src="opim.jpg" alt="Dior Sauvage">
+                        <div class="discount-badge">
+                            <span>45%</span>
+                            <small>OFF</small>
+                        </div>
+                        <div class="limited-banner">
+                            <span>HOT DEAL</span>
+                        </div>
+                        <div class="stock-indicator">
+                            <div class="stock-bar">
+                                <div class="stock-fill" style="width: 60%"></div>
+                            </div>
+                            <span class="stock-text">40% sold</span>
+                        </div>
+                    </div>
+
+                    <div class="deal-info">
+                        <h3>Dior Sauvage</h3>
+                        <div class="price-section">
+                            <span class="deal-price">$70</span>
+                            <span class="original-price">$128</span>
+                            <span class="savings">Save $58</span>
+                        </div>
+                        <div class="urgency-indicators">
+                            <div class="viewers-count">
+                                <i class="fas fa-eye"></i>
+                                <span class="viewer-number">47</span> people viewing
+                            </div>
+                        </div>
+                        <div class="deal-actions" style="font-size: 1.05em;">
+                            <button class="btn btn-primary add-to-cart" data-product="dior-sauvage"
+                                style="padding: 0.5em 1em; font-size: 0.95em;">
+                                <i class="fas fa-shopping-bag" style="font-size: 0.95em;"></i>
+                                Add to Cart
+                            </button>
+                            <button class="btn btn-secondary quick-view" style="padding: 0.5em 1em; font-size: 0.95em;">
+                                <i class="fas fa-eye" style="font-size: 0.95em;"></i>
+                                Quick View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flash Deal 3 -->
+                <div class="flash-deal-card" data-category="flash">
+                    <div class="deal-timer">
+                        <div class="timer-label">Ends In:</div>
+                        <div class="countdown" data-end-time="2024-12-31T23:59:59">
+                            <div class="time-unit">
+                                <span class="time-value hours">06</span>
+                                <span class="time-label">Hours</span>
+                            </div>
+                            <div class="time-unit">
+                                <span class="time-value minutes">45</span>
+                                <span class="time-label">Mins</span>
+                            </div>
+                            <div class="time-unit">
+                                <span class="time-value seconds">12</span>
+                                <span class="time-label">Secs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-image">
+                        <img src="духи_парфюм_идея инфографики_карточка товара(1).jpg" alt="Tom Ford Black Orchid">
+                        <div class="discount-badge">
+                            <span>35%</span>
+                            <small>OFF</small>
+                        </div>
+                        <div class="limited-banner">
+                            <span>LUXURY DEAL</span>
+                        </div>
+                        <div class="stock-indicator">
+                            <div class="stock-bar">
+                                <div class="stock-fill" style="width: 80%"></div>
+                            </div>
+                            <span class="stock-text">80% sold</span>
+                        </div>
+                    </div>
+
+                    <div class="deal-info">
+                        <h3>Tom Ford Black Orchid</h3>
+                        <div class="price-section">
+                            <span class="deal-price">$107</span>
+                            <span class="original-price">$165</span>
+                            <span class="savings">Save $58</span>
+                        </div>
+                        <div class="urgency-indicators">
+                            <div class="viewers-count">
+                                <i class="fas fa-eye"></i>
+                                <span class="viewer-number">31</span> people viewing
+                            </div>
+                        </div>
+                        <div class="deal-actions" style="font-size: 1.05em;">
+                            <button class="btn btn-primary add-to-cart" data-product="tom-ford-orchid"
+                                style="padding: 0.5em 1em; font-size: 0.95em;">
+                                <i class="fas fa-shopping-bag" style="font-size: 0.95em;"></i>
+                                Add to Cart
+                            </button>
+                            <button class="btn btn-secondary quick-view" style="padding: 0.5em 1em; font-size: 0.95em;">
+                                <i class="fas fa-eye" style="font-size: 0.95em;"></i>
+                                Quick View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Daily Deal Section -->
+    <section class="daily-deal-section" id="daily-deal">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-star"></i>
+                    <span>Deal of the Day</span>
+                </div>
+                <h2> Today's Exclusive Deal</h2>
+                <p>One incredible offer, available for 24 hours only</p>
+            </div>
+
+            <div class="daily-deal-card">
+                <div class="deal-countdown-header">
+                    <h3>This Deal Ends In:</h3>
+                    <div class="main-countdown" id="daily-countdown">
+                        <div class="countdown-unit">
+                            <span class="countdown-number hours">14</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-unit">
+                            <span class="countdown-number minutes">32</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-unit">
+                            <span class="countdown-number seconds">19</span>
+                            <span class="countdown-label">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="daily-deal-content">
+                    <div class="deal-image">
+                        <img src="perfume.jpg" alt="MFK Baccarat Rouge 540">
+                        <div class="mega-discount">
+                            <span class="discount-percent">55%</span>
+                            <span class="discount-text">OFF</span>
+                        </div>
+                        <div class="exclusive-badge">
+                            <i class="fas fa-crown"></i>
+                            <span>EXCLUSIVE</span>
+                        </div>
+                    </div>
+
+                    <div class="deal-details">
+                        <h2>MFK Baccarat Rouge 540</h2>
+                        <p class="deal-subtitle">The world's most coveted luxury fragrance</p>
+
+                        <div class="deal-pricing">
+                            <div class="price-display">
+                                <span class="mega-price">$146</span>
+                                <span class="original-mega-price">$325</span>
+                            </div>
+                            <div class="savings-display">
+                                <span class="mega-savings">You Save $179</span>
+                            </div>
+                        </div>
+
+                        <div class="stock-progress">
+                            <div class="stock-header">
+                                <span>Stock Status</span>
+                                <span class="stock-percentage">Only 18% left!</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 18%"></div>
+                            </div>
+                            <div class="stock-info">
+                                <span>9 of 50 remaining</span>
+                            </div>
+                        </div>
+
+                        <div class="deal-features">
+                            <div class="feature-item">
+                                <i class="fas fa-shipping-fast"></i>
+                                <span>Free Express Shipping</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-gift"></i>
+                                <span>Luxury Gift Box Included</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-certificate"></i>
+                                <span>Authenticity Guaranteed</span>
+                            </div>
+                        </div>
+
+                        <div class="deal-actions">
+                            <button class="btn btn-mega add-to-cart" data-product="mfk-baccarat">
+                                <i class="fas fa-shopping-bag"></i>
+                                Claim This Deal Now
+                            </button>
+                            <button class="btn btn-secondary notify-btn">
+                                <i class="fas fa-bell"></i>
+                                Notify When Back
+                            </button>
+                        </div>
+
+                        <div class="social-proof">
+                            <div class="recent-purchases">
+                                <i class="fas fa-fire"></i>
+                                <span>12 people bought this in the last hour</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seasonal Offers Section -->
+    <section class="seasonal-offers-section" id="seasonal-offers">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-leaf"></i>
+                    <span>Seasonal Offers</span>
+                </div>
+                <h2>Autumn Fragrance Festival</h2>
+                <p>Embrace the season with our specially curated autumn collection</p>
+            </div>
+
+            <div class="seasonal-grid">
+                <!-- Seasonal Deal 1 -->
+                <div class="seasonal-card autumn-theme" data-category="seasonal">
+                    <div class="seasonal-bg">
+                        <div class="autumn-leaves">
+                            <i class="fas fa-leaf leaf-1"></i>
+                            <i class="fas fa-leaf leaf-2"></i>
+                            <i class="fas fa-leaf leaf-3"></i>
+                        </div>
+                    </div>
+
+                    <div class="seasonal-content">
+                        <div class="seasonal-badge">
+                            <span>AUTUMN SPECIAL</span>
+                        </div>
+                        <h3>Warm & Spicy Collection</h3>
+                        <p>Perfect fragrances for cozy autumn days</p>
+
+                        <div class="seasonal-products">
+                            <div class="mini-product">
+                                <img src="GUERLAIN - L'Art & La Matière Cuir Béluga eau de parfum _ Selfridges_com.jpg"
+                                    alt="Product">
+                                <span>Viktor & Rolf Spicebomb</span>
+                            </div>
+                            <div class="mini-product">
+                                <img src="Guerlain Santal Pao Rosa Eau de Parfum.jpg" alt="Product">
+                                <span>Tom Ford Oud Wood</span>
+                            </div>
+                        </div>
+
+                        <div class="seasonal-offer">
+                            <span class="offer-text">25% OFF</span>
+                            <span class="offer-condition">on orders above $200</span>
+                        </div>
+
+                        <button class="btn btn-seasonal">
+                            <i class="fas fa-leaf"></i>
+                            Shop Autumn Collection
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Seasonal Deal 2 -->
+                <div class="seasonal-card winter-theme" data-category="seasonal">
+                    <div class="seasonal-bg">
+                        <div class="winter-snowflakes">
+                            <i class="fas fa-snowflake flake-1"></i>
+                            <i class="fas fa-snowflake flake-2"></i>
+                            <i class="fas fa-snowflake flake-3"></i>
+                        </div>
+                    </div>
+
+                    <div class="seasonal-content">
+                        <div class="seasonal-badge winter">
+                            <span>WINTER PREVIEW</span>
+                        </div>
+                        <h3>Oud & Amber Collection</h3>
+                        <p>Rich, luxurious scents for winter elegance</p>
+
+                        <div class="seasonal-products">
+                            <div class="mini-product">
+                                <img src="mers (2).jpg" alt="Product">
+                                <span>Amouage Jubilation XXV</span>
+                            </div>
+                            <div class="mini-product">
+                                <img src="jpg(22).jpg" alt="Product">
+                                <span>Clive Christian No. 1</span>
+                            </div>
+                        </div>
+
+                        <div class="seasonal-offer">
+                            <span class="offer-text">30% OFF</span>
+                            <span class="offer-condition">Early Bird Special</span>
+                        </div>
+
+                        <button class="btn btn-seasonal winter">
+                            <i class="fas fa-snowflake"></i>
+                            Pre-Order Winter Collection
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Seasonal Deal 3 -->
+                <div class="seasonal-card spring-theme" data-category="seasonal">
+                    <div class="seasonal-bg">
+                        <div class="spring-flowers">
+                            <i class="fas fa-flower flower-1"></i>
+                            <i class="fas fa-flower flower-2"></i>
+                            <i class="fas fa-flower flower-3"></i>
+                        </div>
+                    </div>
+
+                    <div class="seasonal-content">
+                        <div class="seasonal-badge spring">
+                            <span>SPRING FRESH</span>
+                        </div>
+                        <h3>Fresh & Floral Collection</h3>
+                        <p>Light, refreshing scents for spring renewal</p>
+
+                        <div class="seasonal-products">
+                            <div class="mini-product">
+                                <img src="Top Creed Perfumes to Buy Now _ Luxury Scents for Him & Her That Last All Day.jpg"
+                                    alt="Product">
+                                <span>Jo Malone Peony</span>
+                            </div>
+                            <div class="mini-product">
+                                <img src="Парфюм_ Мужской парфюм. Генерация картинок. Нейросети. Графический дизайнер. Инфографика.jpg"
+                                    alt="Product">
+                                <span>Gucci Bloom</span>
+                            </div>
+                        </div>
+
+                        <div class="seasonal-offer">
+                            <span class="offer-text">20% OFF</span>
+                            <span class="offer-condition">+ Free Sample Set</span>
+                        </div>
+
+                        <button class="btn btn-seasonal spring">
+                            <i class="fas fa-seedling"></i>
+                            Explore Spring Collection
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coupon Reveal Section -->
+    <section class="coupon-section" id="coupon-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-ticket-alt"></i>
+                    <span>Exclusive Coupons</span>
+                </div>
+                <h2>Scratch & Save</h2>
+                <p>Reveal hidden discounts and exclusive promo codes</p>
+            </div>
+
+            <div class="coupon-grid">
+                <!-- Scratch Coupon 1 -->
+                <div class="scratch-coupon" id="coupon-1">
+                    <div class="coupon-header">
+                        <h3>Mystery Discount</h3>
+                        <p>Scratch to reveal your savings!</p>
+                    </div>
+
+                    <div class="scratch-area" data-coupon="AUTUMN25">
+                        <div class="scratch-overlay">
+                            <i class="fas fa-hand-pointer"></i>
+                            <span>Scratch Here</span>
+                        </div>
+                        <div class="coupon-content">
+                            <div class="coupon-code">AUTUMN25</div>
+                            <div class="coupon-discount">25% OFF</div>
+                            <div class="coupon-condition">On orders above $150</div>
+                        </div>
+                    </div>
+
+                    <div class="coupon-actions">
+                        <button class="btn btn-coupon copy-code" data-code="AUTUMN25">
+                            <i class="fas fa-copy"></i>
+                            Copy Code
+                        </button>
+                        <div class="coupon-validity">
+                            <i class="fas fa-clock"></i>
+                            <span>Valid until Dec 31, 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hover Reveal Coupon 2 -->
+                <div class="hover-coupon" id="coupon-2">
+                    <div class="coupon-header">
+                        <h3>VIP Exclusive</h3>
+                        <p>Hover to reveal your special code!</p>
+                    </div>
+
+                    <div class="hover-reveal-area">
+                        <div class="hover-overlay">
+                            <i class="fas fa-crown"></i>
+                            <span>Hover to Reveal</span>
+                        </div>
+                        <div class="coupon-content">
+                            <div class="coupon-code">VIP30</div>
+                            <div class="coupon-discount">30% OFF</div>
+                            <div class="coupon-condition">Luxury Collection Only</div>
+                        </div>
+                    </div>
+
+                    <div class="coupon-actions">
+                        <button class="btn btn-coupon copy-code" data-code="VIP30">
+                            <i class="fas fa-copy"></i>
+                            Copy Code
+                        </button>
+                        <div class="coupon-validity">
+                            <i class="fas fa-clock"></i>
+                            <span>Valid for 48 hours</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Click Reveal Coupon 3 -->
+                <div class="click-coupon" id="coupon-3">
+                    <div class="coupon-header">
+                        <h3>First Time Buyer</h3>
+                        <p>Click the gift box to unlock your discount!</p>
+                    </div>
+
+                    <div class="click-reveal-area">
+                        <div class="gift-box" id="gift-box">
+                            <i class="fas fa-gift"></i>
+                            <span>Click to Open</span>
+                        </div>
+                        <div class="coupon-content">
+                            <div class="coupon-code">WELCOME15</div>
+                            <div class="coupon-discount">15% OFF</div>
+                            <div class="coupon-condition">First Purchase + Free Shipping</div>
+                        </div>
+                    </div>
+
+                    <div class="coupon-actions">
+                        <button class="btn btn-coupon copy-code" data-code="WELCOME15">
+                            <i class="fas fa-copy"></i>
+                            Copy Code
+                        </button>
+                        <div class="coupon-validity">
+                            <i class="fas fa-clock"></i>
+                            <span>One-time use only</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Deal Button -->
+    <div class="floating-deal-btn" id="floating-deal">
+        <div class="floating-content">
+            <div class="floating-icon">
+                <i class="fas fa-fire"></i>
+            </div>
+            <div class="floating-text">
+                <span class="floating-title">Today's Top Deal</span>
+                <span class="floating-subtitle">55% OFF MFK Baccarat</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" id="cart-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: $<span id="cart-total">0.00</span></span>
+            </div>
+            <button class="btn btn-primary checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nure Véla</h3>
+
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nure Véla. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="deals-script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Nure Véla | Luxury Perfumes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact-styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="logo-animation">
+                <h1>Nure Véla</h1>
+                <div class="loading-bar" style="margin: 0 auto; display: block;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <h2>Nure Véla</h2>
+            </div>
+    
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#collection" class="nav-link">Collections</a></li>
+                    <li><a href="Categories.html" class="nav-link">Categories</a></li>
+                    <li><a href="deals.html" class="nav-link">Deals</a></li>
+                    <li><a href="Contact.html" class="nav-link">Contact</a></li>
+    
+                </ul>
+            </div>
+    
+            <div class="nav-actions">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search perfumes...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="cart-container">
+                    <button class="cart-btn" id="cart-btn">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="contact-hero-bg">
+            <div class="hero-bg-image"></div>
+            <div class="hero-overlay"></div>
+            <div class="particles" id="contact-particles"></div>
+            <div class="floating-elements">
+                <div class="floating-perfume floating-perfume-1"></div>
+                <div class="floating-perfume floating-perfume-2"></div>
+                <div class="floating-perfume floating-perfume-3"></div>
+            </div>
+            <div class="scent-waves">
+                <div class="wave wave-1"></div>
+                <div class="wave wave-2"></div>
+                <div class="wave wave-3"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="contact-hero-content">
+                <div class="section-badge">
+                    <i class="fas fa-envelope"></i>
+                    <span>Get In Touch</span>
+                </div>
+                <h1 class="contact-hero-title">
+                    Contact <span class="gradient-text">Odore Perla</span>
+                </h1>
+                <p class="contact-hero-description">
+                    We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section Organized -->
+    <section class="contact-section">
+        <div class="container contact-section-container" style="display: flex; flex-wrap: wrap; gap: 32px; justify-content: center; align-items: stretch; padding: 32px 0;">
+            <!-- Contact Info Card -->
+            <div class="contact-info-card glass-enhanced" style="flex: 1 1 320px; min-width: 280px; max-width: 400px; display: flex; flex-direction: column; justify-content: center;">
+                <h3 style="margin-bottom: 20px;"><i class="fas fa-headset"></i> Contact Us Directly</h3>
+                <div class="contact-item" style="display: flex; gap: 16px; align-items: flex-start; margin-bottom: 20px;">
+                    <div class="contact-icon pulse-animate" style="font-size: 1.5rem;">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4 style="margin: 0;">Call Now</h4>
+                        <a href="tel:+1234567890" class="call-link" style="color: var(--primary-color); font-weight: 500;">+251 9 51978014</a>
+                        <small style="display: block; color: #888;">Mon-Fri: 9AM-6PM EST</small>
+                    </div>
+                </div>
+                <div class="contact-item" style="display: flex; gap: 16px; align-items: flex-start; margin-bottom: 20px;">
+                    <div class="contact-icon pulse-animate" style="font-size: 1.5rem;">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4 style="margin: 0;">Email Us</h4>
+                        <a href="Nuredinxos@gmail.com" class="email-link" style="color: var(--primary-color); font-weight: 500;">Nurexos@gmail.com</a>
+                        <small style="display: block; color: #888;">Response within 24 hours</small>
+                    </div>
+                </div>
+                <div class="contact-item" style="display: flex; gap: 16px; align-items: flex-start;">
+                    <div class="contact-icon pulse-animate" style="font-size: 1.5rem;">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4 style="margin: 0;">Visit Us</h4>
+                        <p style="margin: 0;">123 Nure Véla<br>Addis Ababa, Bole 10001</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Card -->
+            <div class="social-media-card glass-enhanced" style="flex: 1 1 320px; min-width: 280px; max-width: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+                <h3 style="margin-bottom: 16px;"><i class="fas fa-share-alt"></i> Connect With Us</h3>
+                <p style="margin-bottom: 24px;">Follow us for exclusive offers, fragrance tips, and behind-the-scenes content.</p>
+                <div class="social-icons" style="display: flex; gap: 16px; justify-content: center;">
+                    <a href="#" class="social-icon facebook" data-tooltip="Facebook" style="font-size: 1.4rem;">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon instagram" data-tooltip="Instagram" style="font-size: 1.4rem;">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon twitter" data-tooltip="Twitter" style="font-size: 1.4rem;">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    
+                    <a href="#" class="social-icon whatsapp" data-tooltip="WhatsApp" style="font-size: 1.4rem;">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Connected with <span class="brand-highlight">Nure Véla</span></h2>
+                <p>Be the first to know about new collections, exclusive offers, and fragrance tips.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nure Véla</h3>
+    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nure Véla. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-close" id="cart-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-bag"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: $<span id="cart-total">0.00</span></span>
+            </div>
+            <button class="btn btn-primary checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Success Modal -->
+    <div class="success-modal" id="success-modal">
+        <div class="modal-content">
+            <div class="success-animation">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Message Sent Successfully!</h3>
+            <p>Thank you for contacting Odore Perla. We'll get back to you within 24 hours.</p>
+            <button class="btn btn-primary" onclick="closeSuccessModal()">Continue</button>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="notification-toast" id="notification-toast">
+        <i class="fas fa-check-circle"></i>
+        <span>Message sent successfully!</span>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="contact-script.js"></script>
+</body>
+
+</html>
