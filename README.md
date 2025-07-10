@@ -2,7 +2,8 @@
 
 **Nure Véla** is a premium, fully responsive luxury perfume eCommerce website crafted with pure **HTML**, **CSS**, and **JavaScript**. Designed for elegance and performance, it delivers a cinematic shopping experience with animation, visual storytelling, and immersive interactivity.
 
-![Odore Perla Banner](./banner.png) <!-- optional, update this with a real banner image path -->
+
+![Screenshot (65)](https://github.com/user-attachments/assets/e97c2f0f-d9b0-48bc-a722-6e2a6b44841f)
 
 ## ✨ Live Preview
 
