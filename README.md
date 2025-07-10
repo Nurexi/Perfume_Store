@@ -7,7 +7,7 @@
 ## ✨ Live Preview
 
 [🌐 Visit Odore Perla Online]((https://nure-perfume.netlify.app/))  
-*(Replace with your live link)*
+(https://nure-perfume.netlify.app/)
 
 ---
 
