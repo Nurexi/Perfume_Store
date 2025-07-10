@@ -1,13 +1,13 @@
-# 🌸 Odore Perla – Luxury Perfumes
+# ✨ Nure Véla – Luxury Perfumes
 
-**Odore Perla** is a premium, fully responsive luxury perfume eCommerce website crafted with pure **HTML**, **CSS**, and **JavaScript**. Designed for elegance and performance, it delivers a cinematic shopping experience with animation, visual storytelling, and immersive interactivity.
+**Nure Véla** is a premium, fully responsive luxury perfume eCommerce website crafted with pure **HTML**, **CSS**, and **JavaScript**. Designed for elegance and performance, it delivers a cinematic shopping experience with animation, visual storytelling, and immersive interactivity.
 
 ![Odore Perla Banner](./banner.png) <!-- optional, update this with a real banner image path -->
 
 ## ✨ Live Preview
 
-[🌐 Visit Odore Perla Online](https://your-deployment-link.vercel.app)
-*(Replace with your live link)*
+[🌐 Visit Odore Perla Online]((https://nure-perfume.netlify.app/))  
+(https://nure-perfume.netlify.app/)
 
 ---
 
