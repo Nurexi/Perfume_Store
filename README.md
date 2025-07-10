@@ -80,12 +80,7 @@ Odore-Perla/
 
 ---
 
-## 📸 Preview Screenshots
 
-*(Optional: Insert screenshots or screen recordings here)*
-You can use GitHub issues or upload to `assets/screenshots` and embed here.
-
----
 
 ## 🚀 Getting Started
 
@@ -108,7 +103,7 @@ start index.html
 
 ## 🧠 Creator
 
-Made with passion by [**Nuredin Ibrahim**](https://nuredinibrahim.vercel.app/)
+Made with passion by [**Nuredin Ibrahim**](https://nurexi.vercel.app/)
 🚀 Freelance Frontend Developer | UI/UX Innovator | Tech Enthusiast
 
 ---
