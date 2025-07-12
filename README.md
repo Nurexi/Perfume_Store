@@ -1,4 +1,4 @@
-# ✨ Nure Véla – Luxury Perfumes    
+# ✨ Nure Véla – Luxury Perfumes     
     
 **Nure Véla** is a premium, fully responsive luxury perfume eCommerce website crafted with pure **HTML**, **CSS**, and **JavaScript**. Designed for elegance and performance, it delivers a cinematic shopping experience with animation, visual storytelling, and immersive interactivity.
 
